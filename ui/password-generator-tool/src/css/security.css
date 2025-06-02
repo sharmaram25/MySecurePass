@@ -1,0 +1,419 @@
+/* Security-themed background with floating elements */
+.security-background {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Floating security elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.security-element {
+  position: absolute;
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Light mode security elements - More visible and colorful */
+.light-mode .security-element {
+  opacity: 0.25;
+  color: rgba(99, 102, 241, 0.6);
+  filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.2));
+}
+
+/* Dark mode security elements */
+.dark-mode .security-element {
+  opacity: 0.2;
+  color: rgba(139, 92, 246, 0.5);
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.3));
+}
+
+/* Security icons positioning and sizing - More elements */
+.security-element.shield-1 {
+  top: 8%;
+  left: 5%;
+  font-size: 3.5rem;
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
+.security-element.lock-1 {
+  top: 15%;
+  right: 8%;
+  font-size: 2.8rem;
+  animation-delay: 1s;
+  animation-duration: 7s;
+}
+
+.security-element.key-1 {
+  top: 55%;
+  left: 6%;
+  font-size: 2.3rem;
+  animation-delay: 2s;
+  animation-duration: 9s;
+}
+
+.security-element.shield-2 {
+  bottom: 18%;
+  right: 12%;
+  font-size: 3rem;
+  animation-delay: 3s;
+  animation-duration: 6s;
+}
+
+.security-element.lock-2 {
+  top: 35%;
+  left: 12%;
+  font-size: 2.5rem;
+  animation-delay: 4s;
+  animation-duration: 8s;
+}
+
+.security-element.key-2 {
+  bottom: 25%;
+  left: 18%;
+  font-size: 2rem;
+  animation-delay: 5s;
+  animation-duration: 7s;
+}
+
+.security-element.binary-1 {
+  top: 12%;
+  left: 22%;
+  font-size: 1.8rem;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+.security-element.binary-2 {
+  bottom: 12%;
+  right: 22%;
+  font-size: 1.6rem;
+  animation-delay: 3.5s;
+  animation-duration: 9s;
+}
+
+.security-element.fingerprint-1 {
+  top: 45%;
+  right: 4%;
+  font-size: 2.8rem;
+  animation-delay: 2.5s;
+  animation-duration: 8s;
+}
+
+.security-element.wifi-1 {
+  bottom: 35%;
+  left: 32%;
+  font-size: 2.2rem;
+  animation-delay: 4.5s;
+  animation-duration: 7s;
+}
+
+/* Additional security elements for more density */
+.security-element.shield-3 {
+  top: 25%;
+  left: 35%;
+  font-size: 2rem;
+  animation-delay: 6s;
+  animation-duration: 9s;
+}
+
+.security-element.lock-3 {
+  bottom: 45%;
+  right: 25%;
+  font-size: 1.8rem;
+  animation-delay: 7s;
+  animation-duration: 8s;
+}
+
+.security-element.key-3 {
+  top: 65%;
+  right: 35%;
+  font-size: 1.6rem;
+  animation-delay: 8s;
+  animation-duration: 7s;
+}
+
+.security-element.binary-3 {
+  top: 35%;
+  left: 45%;
+  font-size: 1.4rem;
+  animation-delay: 9s;
+  animation-duration: 10s;
+}
+
+.security-element.fingerprint-2 {
+  bottom: 55%;
+  left: 50%;
+  font-size: 2rem;
+  animation-delay: 10s;
+  animation-duration: 8s;
+}
+
+.security-element.wifi-2 {
+  top: 75%;
+  right: 45%;
+  font-size: 1.7rem;
+  animation-delay: 11s;
+  animation-duration: 9s;
+}
+
+/* Enhanced floating animation with rotation and scale */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: var(--base-opacity, 0.15);
+  }
+  25% {
+    transform: translateY(-25px) rotate(8deg) scale(1.1);
+    opacity: calc(var(--base-opacity, 0.15) * 1.3);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-6deg) scale(0.95);
+    opacity: var(--base-opacity, 0.15);
+  }
+  75% {
+    transform: translateY(-20px) rotate(4deg) scale(1.05);
+    opacity: calc(var(--base-opacity, 0.15) * 1.1);
+  }
+}
+
+/* Light mode base opacity */
+.light-mode .security-element {
+  --base-opacity: 0.25;
+}
+
+/* Dark mode base opacity */
+.dark-mode .security-element {
+  --base-opacity: 0.2;
+}
+
+/* Enhanced gradient overlays with creative transitions */
+.security-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
+              radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
+              linear-gradient(45deg, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: gradientShift 12s ease-in-out infinite;
+}
+
+/* Light mode gradient overlay - More prominent */
+.light-mode .security-background::before {
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+              radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+              linear-gradient(45deg, rgba(99, 102, 241, 0.05) 0%, transparent 70%),
+              linear-gradient(-45deg, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
+  animation: gradientShiftLight 15s ease-in-out infinite;
+}
+
+/* Dark mode gradient overlay */
+.dark-mode .security-background::before {
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.18) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.14) 0%, transparent 60%),
+              radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.10) 0%, transparent 60%),
+              linear-gradient(45deg, rgba(99, 102, 241, 0.08) 0%, transparent 80%);
+  animation: gradientShiftDark 18s ease-in-out infinite;
+}
+
+/* Gradient shift animations */
+@keyframes gradientShiftLight {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  33% {
+    transform: rotate(2deg) scale(1.02);
+    opacity: 0.9;
+  }
+  66% {
+    transform: rotate(-1deg) scale(0.98);
+    opacity: 1.1;
+  }
+}
+
+@keyframes gradientShiftDark {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(1deg) scale(1.01);
+    opacity: 0.95;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0.5deg);
+  }
+}
+
+/* Binary code animation with typewriter effect */
+.binary-code {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  letter-spacing: 3px;
+  animation: typewriter 8s linear infinite;
+}
+
+@keyframes typewriter {
+  0%, 90%, 100% {
+    opacity: var(--base-opacity, 0.15);
+  }
+  45%, 55% {
+    opacity: calc(var(--base-opacity, 0.15) * 1.5);
+  }
+}
+
+/* Enhanced pulse animation for important security elements */
+.security-element.pulse {
+  animation: float 6s ease-in-out infinite, pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: var(--base-opacity, 0.15);
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: calc(var(--base-opacity, 0.15) * 1.4);
+  }
+}
+
+/* Content overlay to ensure readability */
+.content-overlay {
+  position: relative;
+  z-index: 10;
+}
+
+/* Creative transition effects for mode switching */
+.security-background {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.security-element {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.security-background::before {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mode switching animation */
+.security-background.transitioning {
+  animation: modeTransition 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modeTransition {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Enhanced security particles for more dynamic feel */
+.security-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: particle-float 10s linear infinite;
+  opacity: 0.4;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light mode particles */
+.light-mode .particle {
+  opacity: 0.6;
+  background: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+/* Dark mode particles */
+.dark-mode .particle {
+  opacity: 0.5;
+  background: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+}
+
+.particle:nth-child(1) { top: 8%; left: 18%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 28%; left: 58%; animation-delay: 2s; }
+.particle:nth-child(3) { top: 68%; left: 28%; animation-delay: 4s; }
+.particle:nth-child(4) { top: 48%; left: 78%; animation-delay: 6s; }
+.particle:nth-child(5) { top: 78%; left: 68%; animation-delay: 1s; }
+.particle:nth-child(6) { top: 18%; left: 88%; animation-delay: 3s; }
+.particle:nth-child(7) { top: 58%; left: 8%; animation-delay: 5s; }
+.particle:nth-child(8) { top: 88%; left: 38%; animation-delay: 7s; }
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: var(--particle-opacity, 0.4);
+  }
+  25% {
+    transform: translateY(-40px) scale(1.3) rotate(90deg);
+    opacity: calc(var(--particle-opacity, 0.4) * 0.7);
+  }
+  50% {
+    transform: translateY(-20px) scale(0.8) rotate(180deg);
+    opacity: var(--particle-opacity, 0.4);
+  }
+  75% {
+    transform: translateY(-35px) scale(1.1) rotate(270deg);
+    opacity: calc(var(--particle-opacity, 0.4) * 0.9);
+  }
+  100% {
+    transform: translateY(0px) scale(1) rotate(360deg);
+    opacity: var(--particle-opacity, 0.4);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .security-element {
+    font-size: 0.8em;
+  }
+  
+  .particle {
+    width: 3px;
+    height: 3px;
+  }
+}
