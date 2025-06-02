@@ -727,7 +727,7 @@ Need assistance? We're here to help! 🤝
   <tr>
     <td width="30%"><b>📧 Email Support</b></td>
     <td>
-      <a href="mailto:support@mysecurepass.dev">support@mysecurepass.dev</a><br/>
+      <a href="mailto:sharmaram2504@gmail.com">sharmaram2504@gmail.com</a><br/>
       <small>Response within 24 hours</small>
     </td>
   </tr>
@@ -745,13 +745,7 @@ Need assistance? We're here to help! 🤝
       <small>Tell us about your ideas!</small>
     </td>
   </tr>
-  <tr>
-    <td><b>💬 Community Chat</b></td>
-    <td>
-      <a href="https://github.com/sharmaram25/MySecurePass/discussions">GitHub Discussions</a><br/>
-      <small>Join the community conversation</small>
-    </td>
-  </tr>
+  
 </table>
 
 ### 🔧 Troubleshooting
