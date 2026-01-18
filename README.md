@@ -1,6 +1,7 @@
 # MySecurePass
 
-![MySecurePass App Showcase](https://via.placeholder.com/1200x600/0f172a/3b82f6?text=MySecurePass+Interface+Preview)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://mysecurepass.netlify.app)
+![MySecurePass App Showcase](assets/showcase.png)
 
 <div align="center">
   
