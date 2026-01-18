@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="10" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background Container for Maskable Icon compliance -->
+  <rect width="512" height="512" fill="#0f172a"/>
+  
+  <!-- Main Shield Shape -->
+  <g filter="url(#shadow)" transform="translate(0, -10)">
+    <path d="M256 464C384 400 448 300 448 160V80L256 32L64 80V160C64 300 128 400 256 464Z" fill="url(#shieldGrad)"/>
+    
+    <!-- Glossy Highlight -->
+    <path d="M256 32L64 80V160C64 250 100 330 170 390L256 435V32Z" fill="#ffffff" fill-opacity="0.15"/>
+    
+    <!-- Inner Checkmark/Security Symbol -->
+    <path d="M352 176L224 304L160 240" stroke="#ffffff" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>
