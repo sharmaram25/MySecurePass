@@ -1,7 +1,7 @@
 # MySecurePass
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://mysecurepass.netlify.app)
-![MySecurePass App Showcase](assets/showcase.png)
+![MySecurePass App Showcase](assets/mysecurepass.png)
 
 <div align="center">
   
