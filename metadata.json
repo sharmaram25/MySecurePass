@@ -1,0 +1,5 @@
+{
+  "name": "MySecurePass",
+  "description": "A security-first, client-side password generator and analyzer with advanced entropy logic and PWA support.",
+  "requestFramePermissions": []
+}
