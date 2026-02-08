@@ -10,7 +10,15 @@ export enum PresetType {
   BANKING = 'banking',
   SOCIAL = 'social',
   DEVELOPER = 'developer',
-  ENTERPRISE = 'enterprise'
+  ENTERPRISE = 'enterprise',
+  WIFI = 'wifi',
+  READABLE = 'readable',
+  PIN_4 = 'pin-4',
+  PIN_6 = 'pin-6',
+  API_KEY = 'api-key',
+  STREAMING = 'streaming',
+  STANDARD = 'standard',
+  PASSPHRASE = 'passphrase'
 }
 
 export interface PasswordOptions {

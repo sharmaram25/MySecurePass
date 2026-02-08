@@ -42,20 +42,21 @@ const PasswordDisplay: React.FC<Props> = ({ password, strength, onRegenerate }) 
         {/* Visibility Toggle */}
         <button 
           onClick={() => setIsVisible(!isVisible)}
-          className="absolute top-3 right-3 text-slate-400 hover:text-brand-blue dark:text-slate-500 dark:hover:text-brand-teal transition-colors p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full"
+          className="absolute top-3 right-3 text-slate-500 hover:text-brand-blue dark:text-slate-400 dark:hover:text-brand-teal transition-colors p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-blue/50"
+          aria-label={isVisible ? "Hide password" : "Show password"}
         >
-          {isVisible ? <EyeOff size={16}/> : <Eye size={16}/>}
+          {isVisible ? <EyeOff size={20}/> : <Eye size={20}/>}
         </button>
 
         {/* Text Display */}
-        <div className="min-h-[3.5rem] flex items-center justify-center text-center break-all pt-2">
+        <div className="min-h-[4rem] flex items-center justify-center text-center break-all pt-2">
           <AnimatePresence mode="wait">
              <motion.p
               key={password}
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.02 }}
-              className={`font-mono text-3xl sm:text-4xl text-slate-800 dark:text-slate-100 font-bold tracking-tight w-full ${!isVisible ? 'blur-md select-none opacity-40' : ''}`}
+              className={`font-mono text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white font-bold tracking-tight w-full ${!isVisible ? 'blur-md select-none opacity-40' : ''}`}
             >
               {password}
             </motion.p>
@@ -68,23 +69,23 @@ const PasswordDisplay: React.FC<Props> = ({ password, strength, onRegenerate }) 
         {/* Regenerate - Secondary Action */}
         <button
           onClick={onRegenerate}
-          className="col-span-2 flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-brand-blue dark:hover:text-white py-3.5 rounded-xl font-semibold transition-all active:scale-95 border border-slate-200 dark:border-slate-700 shadow-sm"
+          className="col-span-2 flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 hover:text-brand-blue dark:hover:text-white py-4 rounded-xl font-semibold transition-all active:scale-95 border border-slate-200 dark:border-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400"
         >
-          <RefreshCw size={18} className="transition-transform active:rotate-180" />
-          <span className="text-sm">New</span>
+          <RefreshCw size={20} className="transition-transform active:rotate-180" />
+          <span className="text-sm md:text-base">New</span>
         </button>
         
         {/* Copy - Primary Action */}
         <button
           onClick={handleCopy}
-          className={`col-span-3 flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-white transition-all active:scale-95 shadow-lg shadow-brand-blue/20 dark:shadow-brand-teal/20 ${
+          className={`col-span-3 flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-white transition-all active:scale-95 shadow-lg shadow-brand-blue/20 dark:shadow-brand-teal/20 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 ${
             copied 
               ? 'bg-slate-800 dark:bg-slate-700 cursor-default' 
               : 'bg-gradient-to-r from-brand-blue to-brand-darkBlue dark:from-brand-blue dark:to-brand-teal hover:brightness-110'
           }`}
         >
-          {copied ? <Check size={20} /> : <Copy size={20} />}
-          <span>{copied ? 'Copied' : 'Copy Securely'}</span>
+          {copied ? <Check size={22} /> : <Copy size={22} />}
+          <span className="text-sm md:text-base">{copied ? 'Copied' : 'Copy Securely'}</span>
         </button>
       </div>
     </div>

@@ -11,17 +11,17 @@ const StrengthMeter: React.FC<Props> = ({ strength }) => {
     <div className="w-full space-y-2">
       <div className="flex justify-between items-end">
         <div className="flex flex-col">
-          <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Estimated Crack Time</span>
-          <span className="text-sm font-mono font-bold text-slate-700 dark:text-slate-200">{strength.crackTimeDisplay}</span>
+          <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Estimated Crack Time</span>
+          <span className="text-base md:text-lg font-mono font-bold text-slate-800 dark:text-white">{strength.crackTimeDisplay}</span>
         </div>
         <div className="text-right flex flex-col items-end">
-          <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Entropy</span>
+          <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Entropy</span>
           <div className="flex items-center gap-2">
-             <span className="text-xs text-slate-400 font-mono">{strength.entropy} bits</span>
-             <span className={`text-sm font-extrabold ${
+             <span className="text-sm text-slate-500 dark:text-slate-400 font-mono">{strength.entropy} bits</span>
+             <span className={`text-base md:text-lg font-extrabold ${
                 strength.score >= 4 ? 'text-brand-green' : 
                 strength.score === 3 ? 'text-brand-blue dark:text-brand-teal' : 
-                strength.score === 2 ? 'text-yellow-500' : 'text-red-400'
+                strength.score === 2 ? 'text-yellow-500' : 'text-red-500'
               }`}>
                 {strength.verdict}
               </span>
@@ -46,8 +46,9 @@ const StrengthMeter: React.FC<Props> = ({ strength }) => {
         </div>
       </div>
       
-      <p className="text-[10px] text-slate-400 text-center mt-1">
+      <p className="text-xs text-slate-500 dark:text-slate-400 text-center mt-2 group relative cursor-help">
         Based on offline fast attack (~100 GH/s)
+        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-2 py-1 bg-slate-800 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Standard brute-force benchmark</span>
       </p>
     </div>
   );

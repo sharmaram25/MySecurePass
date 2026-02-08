@@ -1,110 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <link rel="apple-touch-icon" href="/icon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta name="theme-color" content="#0f172a" />
-    <meta name="description" content="Military-grade client-side password generator." />
-    
+    <meta
+      name="description"
+      content="Military-grade client-side password generator."
+    />
+
     <title>MySecurePass</title>
-    
+
     <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json" />
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class', // Enable class-based dark mode
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                blue: '#3b82f6', // Bright Blue
-                darkBlue: '#1e40af', // Deep Blue
-                green: '#10b981', // Emerald
-                teal: '#14b8a6', // Teal for dark mode accents
-                navy: '#0f172a', // Slate 900
-                darker: '#020617', // Slate 950
-              }
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Alive Background Animation - Light */
-      body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-      }
-      
-      .alive-bg {
-        background: linear-gradient(-45deg, #f8fafc, #e0f2fe, #f1f5f9, #eff6ff);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-      }
+    <!-- PWA Manifest injected by vite-plugin-pwa -->
 
-      /* Alive Background Animation - Dark */
-      html.dark body {
-        background: linear-gradient(-45deg, #020617, #0f172a, #1e293b, #0f172a);
-        background-size: 400% 400%;
-      }
-
-      @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      
-      /* Mobile Optimization */
-      input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
-        font-size: 16px;
-      }
-      
-      /* Scrollbar styling */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 4px;
-      }
-      html.dark ::-webkit-scrollbar-thumb {
-        background: #334155;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.26.2",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-hot-toast": "https://esm.sh/react-hot-toast@^2.6.0",
-    "@netlify/functions": "https://esm.sh/@netlify/functions@^5.1.2"
-  }
-}
-</script>
-</head>
-  <body class="alive-bg text-slate-800 dark:text-slate-100 antialiased h-screen w-screen flex flex-col transition-colors duration-500">
+    <title>MySecurePass</title>
+  </head>
+  <body
+    class="alive-bg text-slate-800 dark:text-slate-100 antialiased h-screen w-screen flex flex-col transition-colors duration-500"
+  >
     <div id="root" class="flex-1 flex flex-col h-full"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
