@@ -1,0 +1,23 @@
+# Gradle / Android
+.gradle/
+build/
+/local.properties
+/keystore.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+captures/
+.externalNativeBuild/
+.cxx/
+
+# IDE
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+dist/
+
+# Kotlin compiler caches
+.kotlin/

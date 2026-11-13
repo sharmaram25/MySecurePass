@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MySecurePass</string>
+    <string name="tile_label">New password</string>
+    <string name="autofill_unlock">Unlock MySecurePass</string>
+    <string name="autofill_search">Search MySecurePass</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 108dp adaptive canvas; artwork kept inside the 66dp safe zone. Minimal shield + keyhole. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#6EE7B7"
+        android:pathData="M54,30 L74,37 L74,52 C74,65 66,74 54,79 C42,74 34,65 34,52 L34,37 Z" />
+    <path android:fillColor="#0B0B0D"
+        android:pathData="M54,46 a5,5 0 1,1 -0.01,0 Z M51.5,54 L56.5,54 L57.5,64 L50.5,64 Z" />
+</vector>
